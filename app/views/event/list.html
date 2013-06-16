@@ -1,0 +1,43 @@
+<div ng-controller="EventCtrl">
+
+  <ul class="breadcrumbs">
+    <li><a href="#/">Home</a></li>
+    <li class="current"><a href="#/events">Events</a></li>
+  </ul>
+  <div class="row">
+    <div class="columns large-6">
+      <h4>Events</h4>
+    </div>
+    <div class="columns large-6">
+      <a href='#/events/new' class="button small right">Add Event</a>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Event Date</th>
+        <th>Expiration</th>
+        <th>Photos</th>
+        <th>Access</th>
+        <th>Status</th>
+        <th colspan="3">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="event in events">
+        <td>{{ event.name }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.expiration_date }}</td>
+        <td>{{ event.photos.length }}</td>
+        <td>{{ event.access_state }}</td>
+        <td>{{ event.state }}</td>
+        <th>
+          <a href="#"><i class="general-enclosed foundicon-edit"></i></a>
+          <a href="#"><i class="general-enclosed foundicon-star"></i></a>
+          <a href="#"><i class="general-enclosed foundicon-trash"></i></a>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>

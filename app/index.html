@@ -25,10 +25,51 @@
       <script src="components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+<!--     <div id="main-modal" class="reveal-modal">
+      <h2>Awesome. I have it.</h2>
+      <p class="lead">Your couch.  It is mine.</p>
+      <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+ -->
+    <nav class="top-bar">
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="">Events</a>
+            <ul class="dropdown">
+              <li>Open Events</li>
+              <li>Archived Events</li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li><a href="">Orders</a></li>
+          <li class="divider"></li>
+          <li><a href="">Pricing</a></li>
+          <li class="divider"></li>
+          <li><a href="">Payments</a></li>
+          <li class="divider"></li>
+          <li><a href="">Email</a></li>
+          <li class="divider"></li>
+          <li><a href="">Preferences</a></li>
+          <li class="divider"></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </section>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li><a href="">Logout</a></li>
+        </ul>
+      </section>
+    </nav>
+
     <!-- Add your site or application content here -->
-    <div class="row">
+    <div class="main-row row" ng-class="{blur: modalVisible()}" ng-controller="ModalCtrl">
+      <!-- <a ng-click="toggleModal()">Show Modal</a> -->
       <div class="container columns large-12" ng-view></div>
     </div>
+
 
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
@@ -37,7 +78,15 @@
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/modal_controller.js"></script>
+    <script src="scripts/controllers/event_controller.js"></script>
+    <script src="components/jquery/jquery.js"></script>
+    <script src="components/foundation/js/foundation/foundation.js"></script>
+    <script src="components/foundation/js/foundation/foundation.alerts.js"></script>
+    <script src="components/foundation/js/foundation/foundation.placeholder.js"></script>
+    <script src="components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="components/foundation/js/foundation/foundation.forms.js"></script>
+    <script src="components/foundation/js/foundation/foundation.topbar.js"></script>
     <!-- endbuild -->
   </body>
 </html>

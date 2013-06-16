@@ -3,11 +3,15 @@
 angular.module('picnib', [])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/events', {
+        templateUrl: 'views/event/list.html',
+        controller: 'EventCtrl'
+      })
+      .when('/events/new', {
+        templateUrl: 'views/event/new.html',
+        controller: 'EventCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/events'
       });
   }]);

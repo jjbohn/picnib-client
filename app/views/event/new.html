@@ -1,0 +1,47 @@
+<ul class="breadcrumbs">
+  <li><a href="#/">Home</a></li>
+  <li><a href="#/events">Events</a></li>
+  <li class="current"><a href="#">New</a></li>
+</ul>
+
+<div ng-controller="EventCtrl">
+<form  ng-submit="create()">
+  <fieldset>
+    <legend>Event Details</legend>
+
+    <label>Event Name</label>
+    <input type="text" name="name" ng-model="event.name">
+
+    <label for="url">Event URL</label>
+    <div class="row collapse">
+      <div class="small-3 large-3 columns">
+        <span class="prefix">http://jjbohn.picnib.com/</span>
+      </div>
+      <div class="small-9 large-9 columns">
+        <input type="text" placeholder="Enter your URL...">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="columns large-6">
+        <label for="event_date">Event Date</label>
+        <input type="text">
+      </div>
+
+      <div class="columns large-6">
+        <label for="expiration_date">Expiration Date</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <label for="">Intro Page Text</label>
+    <textarea name="" id=""></textarea>
+
+
+
+    <label for=""></label>
+  </fieldset>
+
+  <input class="button" type="submit" value="Save">
+</form>
+</div>
